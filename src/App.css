@@ -2,4 +2,61 @@
 
 body {
   font-family: "Red Hat Text";
+  background-color: whitesmoke;
 }
+
+.card {
+  border-radius: 10px;
+  max-height: 600px;
+  
+  
+}
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  min-width: 300px;
+  max-width: 500px;
+  margin-left: 100px;
+  margin-top: 80px;
+  
+}
+
+img{ 
+  min-width: 300px;
+  max-width: 400px;
+  border-radius: 16px;
+}
+.price {
+  color: rgb(255, 94, 35);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.about-dessert {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+
+ 
+}
+
+.about-dessert p {
+  margin-bottom: -5px;
+}
+
+.about-dessert h2 {
+  margin-bottom: -5px;
+}
+
+p {
+  color: rgb(99, 99, 99);
+}
+
+.title {
+  margin-left: 120px;
+  font-size: 70px;
+  transform: translateY(70px);
+  color: rgb(24, 6, 0);
+  font-weight: 700;
+}
+  

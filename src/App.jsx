@@ -7,26 +7,31 @@ import dessertsProducts from "./data.json"
 const BASE_URL = "https://res.cloudinary.com/dc2c49xov/desserts/"
 
 function App() {
-  return <>
-
-    <h1>Hello World <AddToCart /></h1>
-    {/* <img src={BASE_URL + "waffle-desktop.jpg"} alt="" /> */}
+  return  <div className="app">
+    <h1 className="title">Desserts</h1>
+    <div className="main"> 
+    
 
     {dessertsProducts.map((dessert) => {
       return (
-        <div key={dessert.name}>
-          <h2>{dessert.name}</h2>
+       
+           <div className="card" key={dessert.name}>
+          
+          
           <img src={BASE_URL + dessert.images.desktop} alt="" />
+          <div className="about-dessert">
+          <p>{dessert.category}</p>
+          <h2>{dessert.name}</h2>
+          <h2 className="price">${dessert.price}</h2> 
+          </div>
+           
         </div>
+        
+       
       );
     })}
-
-
-
-
-    
-    <RemoveItem />
-   </> 
+   </div> 
+  </div>
 }
 
 export default App
