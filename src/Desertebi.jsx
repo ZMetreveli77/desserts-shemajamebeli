@@ -1,5 +1,8 @@
 import "./App.css"
 import dessertsProducts from "./data.json"
+import Cart from "./Cart"
+import { useState } from "react";
+import { AddToCart} from "./Icons"
 
 const BASE_URL = "https://res.cloudinary.com/dc2c49xov/desserts/"
 
@@ -17,6 +20,7 @@ export const Dessertebi = () => {
           
           
           <img src={BASE_URL + dessert.images.desktop} alt="" />
+          <button className="add-to-cart"><AddToCart/>Add to Cart</button>
           <div className="about-dessert">
           <p>{dessert.category}</p>
           <h2>{dessert.name}</h2>

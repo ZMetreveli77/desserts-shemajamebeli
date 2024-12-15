@@ -2,8 +2,8 @@ export const AddToCart = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="21"
-      height="20"
+      width="30"
+      height="30"
       fill="none"
       viewBox="0 0 21 20"
     >
@@ -114,8 +114,8 @@ export const EmptyCart = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="128"
-      height="128"
+      width="250"
+      height="200"
       fill="none"
       viewBox="0 0 128 128"
     >
