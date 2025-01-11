@@ -45,8 +45,8 @@ export const DecrementQuantity = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="10"
-      height="2"
+      width="20"
+      height="5"
       fill="none"
       viewBox="0 0 10 2"
     >
@@ -59,8 +59,8 @@ export const IncrementQuantity = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="10"
-      height="10"
+      width="20"
+      height="20"
       fill="none"
       viewBox="0 0 10 10"
     >
@@ -97,8 +97,8 @@ export const RemoveItem = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="10"
-      height="10"
+      width="15"
+      height="15"
       fill="none"
       viewBox="0 0 10 10"
     >
