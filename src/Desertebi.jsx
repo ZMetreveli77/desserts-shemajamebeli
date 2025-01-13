@@ -5,8 +5,10 @@ import { useState } from "react";
 import { AddToCart} from "./Icons"
 import React from "react";
 import { DecrementQuantity, IncrementQuantity } from "./Icons";
+import { useMediaQuery } from 'react-responsive';
 
 const BASE_URL = "https://res.cloudinary.com/dc2c49xov/desserts/"
+
 
 
 export const Dessertebi = () => {
@@ -39,14 +41,35 @@ export const Dessertebi = () => {
     setCartItems([...cartItems, item]);
   };
 
+  const isMobile = useMediaQuery({ query: '(max-width: 480px)' });
+  const isTablet = useMediaQuery({ query: '(min-width: 481px) and (max-width: 768px)' });
+
+  // let imageSrc;
+
+  // if (isMobile) {
+  //   imageSrc = BASE_URL + dessert.images.mobile;
+  // } else if (isTablet) {
+  //   imageSrc = BASE_URL + dessert.images.tablet;
+  // } else {
+  //   imageSrc = BASE_URL + dessert.images.desktop;
+  // }
+
+ 
+
+ 
+  
   return (
     <div className="app">
       <h1 className="title">Desserts</h1>
       <div className="main">
+        
         {dessertsProducts.map((dessert) => (
-          <div className="{`card ${cartItems.includes(dessert) ? 'added-to-cart' : ''}`" key={dessert.name}>
+          
+           
+          <div className="card"   key={dessert.name}>
             
-            <img src={BASE_URL + dessert.images.desktop} alt="" />
+            
+            <img className={`${cartItems.includes(dessert) ? 'added-to-cart' : ''}`}  src={isMobile ? BASE_URL + dessert.images.mobile : isTablet ? BASE_URL + dessert.images.tablet : BASE_URL + dessert.images.desktop} alt="" />
             {quantity[dessert.name] ? (
               <div className="cart-button">
                 <button
